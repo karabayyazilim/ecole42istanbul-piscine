@@ -1,0 +1,5 @@
+Credentials cache: API:FFC0393B-EB79-4AD2-9009-99EDD46E5A36
+        Principal: akarabay@42ISTANBUL.COM.TR
+
+  Issued                Expires               Principal
+Oct 18 18:18:00 2021  Oct 19 04:18:00 2021  krbtgt/42ISTANBUL.COM.TR@42ISTANBUL.COM.TR
