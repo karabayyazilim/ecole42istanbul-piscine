@@ -1,2 +1,2 @@
-ifconfig | grep ether | sed 's/.\{14\}//;s/ .*(Ethernet)//'
+ifconfig | grep 'ether' | cut -d " " -f2
 
