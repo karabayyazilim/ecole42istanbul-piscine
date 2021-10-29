@@ -1,17 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_div_mod.c                                       :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akarabay <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/26 15:16:26 by akarabay          #+#    #+#             */
-/*   Updated: 2021/10/26 15:19:58 by akarabay         ###   ########.fr       */
+/*   Created: 2021/10/28 11:12:08 by akarabay          #+#    #+#             */
+/*   Updated: 2021/10/28 11:21:58 by akarabay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_div_mod(int a, int b, int *div, int *mod)
+#include <stdio.h>
+
+void ft_ft(int *nbr);
+
+int main(void)
 {
-	*div = a / ::;
-	*mod = a % b;
-}:
+	int nbr = 5;
+
+	ft_ft(&nbr);
+
+	printf("%d", nbr);
+}
+

@@ -1,17 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_div_mod.c                                       :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akarabay <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/26 15:16:26 by akarabay          #+#    #+#             */
-/*   Updated: 2021/10/26 15:19:58 by akarabay         ###   ########.fr       */
+/*   Created: 2021/10/28 12:18:33 by akarabay          #+#    #+#             */
+/*   Updated: 2021/10/28 13:24:07 by akarabay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_div_mod(int a, int b, int *div, int *mod)
+char	*ft_strcpy(char *dest, char *src)
 {
-	*div = a / ::;
-	*mod = a % b;
-}:
+	int	i;
+
+	i = 0;
+	while (src[i] != '\0')
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	dest[i] = '\0';
+	return (dest);
+}

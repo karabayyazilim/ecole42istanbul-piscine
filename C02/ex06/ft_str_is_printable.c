@@ -1,17 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_div_mod.c                                       :+:      :+:    :+:   */
+/*   ft_str_is_printable.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akarabay <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/26 15:16:26 by akarabay          #+#    #+#             */
-/*   Updated: 2021/10/26 15:19:58 by akarabay         ###   ########.fr       */
+/*   Created: 2021/10/29 02:25:09 by akarabay          #+#    #+#             */
+/*   Updated: 2021/10/29 02:25:13 by akarabay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_div_mod(int a, int b, int *div, int *mod)
+#include <unistd.h>
+//#include <stdio.h>
+/*
+int	ft_str_is_printable(char *str);
+
+int	main(void)
 {
-	*div = a / ::;
-	*mod = a % b;
-}:
+	char    deneme[] = {'\'};
+	printf("%d", ft_str_is_printable(deneme));
+	return (0);
+}
+*/
+int	ft_str_is_printable(char *str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i] != '\0')
+	{
+		if (str[i] < 32 || str[i] > 126)
+			return (0);
+		i++;
+	}
+	return (1);
+}

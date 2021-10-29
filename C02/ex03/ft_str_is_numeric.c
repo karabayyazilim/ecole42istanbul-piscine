@@ -1,17 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_div_mod.c                                       :+:      :+:    :+:   */
+/*   ft_str_is_numeric.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akarabay <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/26 15:16:26 by akarabay          #+#    #+#             */
-/*   Updated: 2021/10/26 15:19:58 by akarabay         ###   ########.fr       */
+/*   Created: 2021/10/29 02:23:28 by akarabay          #+#    #+#             */
+/*   Updated: 2021/10/29 02:23:43 by akarabay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_div_mod(int a, int b, int *div, int *mod)
+#include <unistd.h>
+//#include <stdio.h>
+/*
+int	ft_str_is_numeric(char *str);
+
+int	main(void)
 {
-	*div = a / ::;
-	*mod = a % b;
-}:
+	char	deneme[] = {'0', '1', '2', '3', '4', '5', '6', '7','8', '9'};
+	ft_str_is_numeric(deneme);
+	return (0);
+}
+*/
+int	ft_str_is_numeric(char *str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i] != '\0')
+	{
+		if (str[i] < 48 || str[i] > 57)
+			return (0);
+		i++;
+	}
+	return (1);
+}

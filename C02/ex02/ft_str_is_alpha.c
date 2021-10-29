@@ -1,17 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_div_mod.c                                       :+:      :+:    :+:   */
+/*   ft_str_is_alpha.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akarabay <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/26 15:16:26 by akarabay          #+#    #+#             */
-/*   Updated: 2021/10/26 15:19:58 by akarabay         ###   ########.fr       */
+/*   Created: 2021/10/28 21:34:41 by akarabay          #+#    #+#             */
+/*   Updated: 2021/10/28 21:45:17 by akarabay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_div_mod(int a, int b, int *div, int *mod)
+int	ft_str_is_alpha(char *str)
 {
-	*div = a / ::;
-	*mod = a % b;
-}:
+	int i;
+
+	i = 0;
+	while (str[i] != '\0')
+	{
+		if ((str[i] < 'a' || str[i] > 'z') && (str[i] < 'A' || str[i] > 'Z'))
+		{
+			return (0);
+		}
+		i++;
+	}
+	return (1);
+}
