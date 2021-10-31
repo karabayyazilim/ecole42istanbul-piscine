@@ -1,25 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_lowercase.c                              :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akarabay <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/29 02:24:11 by akarabay          #+#    #+#             */
-/*   Updated: 2021/10/30 12:00:16 by akarabay         ###   ########.fr       */
+/*   Created: 2021/10/30 14:36:19 by akarabay          #+#    #+#             */
+/*   Updated: 2021/10/30 14:36:57 by akarabay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_str_is_lowercase(char *str)
-{
-	int	i;
+#include <stdio.h>
 
-	i = 0;
-	while (str[i] != '\0')
-	{
-		if (str[i] < 97 || str[i] > 122)
-			return (0);
-		i++;
-	}
-	return (1);
+int ft_strncmp(char *s1, char *s2, unsigned int n);
+
+int main(void)
+{
+	char s1[] = "merhaba";
+	char s2[] = "alii";
+
+
+    printf("ft : %d\n", ft_strncmp(s1, s2, 2));
 }

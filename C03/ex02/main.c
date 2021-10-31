@@ -5,16 +5,21 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: akarabay <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/28 21:39:58 by akarabay          #+#    #+#             */
-/*   Updated: 2021/10/28 21:47:30 by akarabay         ###   ########.fr       */
+/*   Created: 2021/10/30 17:12:59 by akarabay          #+#    #+#             */
+/*   Updated: 2021/10/30 17:37:34 by akarabay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_str_is_alpha(char *str);
+#include <stdio.h>
 
-int	main(void)
-{
-	char str[] = "ali karabay^";
+char *ft_strcat(char *dest, char *src);
 
-	ft_str_is_alpha(str);
+int main() {
+    
+    char dest[] = "ali";
+    char src[] = " karabay";
+    
+    printf("%s", ft_strcat(dest, src));
+    
+    return 0;
 }

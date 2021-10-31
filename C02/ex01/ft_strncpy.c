@@ -6,20 +6,24 @@
 /*   By: akarabay <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/28 13:08:07 by akarabay          #+#    #+#             */
-/*   Updated: 2021/10/28 13:43:40 by akarabay         ###   ########.fr       */
+/*   Updated: 2021/10/31 01:35:51 by akarabay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
-	int	i;
+	unsigned int	index;
 
-	i = 0;
-	while ((src[i] != '\0') && (i < n))
+	index = 0;
+	while ((index < n) && (src[index] != '\0'))
 	{
-		dest[i] = src[i];
-		i++;
+		dest[index] = src[index];
+		index++;
 	}
-	dest[i] = '\0';
+	while (index < n)
+	{
+		dest[index] = '\0';
+		index++;
+	}
 	return (dest);
 }

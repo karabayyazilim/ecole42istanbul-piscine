@@ -1,29 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akarabay <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/28 13:34:44 by akarabay          #+#    #+#             */
-/*   Updated: 2021/10/28 13:48:31 by akarabay         ###   ########.fr       */
+/*   Created: 2021/10/31 10:38:30 by akarabay          #+#    #+#             */
+/*   Updated: 2021/10/31 11:30:40 by akarabay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-char *ft_strncpy(char *dest, char *src, unsigned int n);
-
-void ft_putstr(char n)
+char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
-	write(1, &n, 1);
-}
+	unsigned int	index;
+	unsigned int	destlen;
 
-int main(void)
-{
-	char dest[] = "", src[] = {"ali karabay"}, n = 5;
-
-	ft_strncpy(dest, src, n);
-
-	ft_putstr(dest[0]);
+	destlen = 0;
+	while (dest[destlen] != '\0')
+		destlen++;
+	index = 0;
+	while (index < nb && src[index] != '\0')
+	{
+		dest[destlen + index] = src[index];
+		index++;
+	}
+	dest[destlen + index] = '\0';
+	return (dest);
 }

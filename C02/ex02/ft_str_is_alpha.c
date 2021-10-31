@@ -6,13 +6,13 @@
 /*   By: akarabay <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/28 21:34:41 by akarabay          #+#    #+#             */
-/*   Updated: 2021/10/28 21:45:17 by akarabay         ###   ########.fr       */
+/*   Updated: 2021/10/30 17:04:21 by akarabay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_str_is_alpha(char *str)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (str[i] != '\0')

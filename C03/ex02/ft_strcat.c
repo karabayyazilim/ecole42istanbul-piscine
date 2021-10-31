@@ -1,25 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_lowercase.c                              :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akarabay <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/29 02:24:11 by akarabay          #+#    #+#             */
-/*   Updated: 2021/10/30 12:00:16 by akarabay         ###   ########.fr       */
+/*   Created: 2021/10/30 15:34:00 by akarabay          #+#    #+#             */
+/*   Updated: 2021/10/31 11:26:38 by akarabay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_str_is_lowercase(char *str)
+char	*ft_strcat(char *dest, char *src)
 {
-	int	i;
+	int	index;
+	int	destlen;
 
-	i = 0;
-	while (str[i] != '\0')
+	destlen = 0;
+	while (dest[destlen] != '\0')
+		destlen++;
+	index = 0;
+	while (src[index] != '\0')
 	{
-		if (str[i] < 97 || str[i] > 122)
-			return (0);
-		i++;
+		dest[destlen + index] = src[index];
+		index++;
 	}
-	return (1);
+	dest[destlen + index] = '\0';
+	return (dest);
 }

@@ -1,25 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_lowercase.c                              :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akarabay <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/29 02:24:11 by akarabay          #+#    #+#             */
-/*   Updated: 2021/10/30 12:00:16 by akarabay         ###   ########.fr       */
+/*   Created: 2021/10/30 14:34:39 by akarabay          #+#    #+#             */
+/*   Updated: 2021/10/30 14:35:52 by akarabay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_str_is_lowercase(char *str)
+int	ft_strncmp(char *s1, char *s2, unsigned int n)
 {
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
+	while (*s1 != '\0' && *s2 != '\0' && n > 0)
 	{
-		if (str[i] < 97 || str[i] > 122)
-			return (0);
-		i++;
+		if (*s1 != *s2)
+			break ;
+		s1++;
+		s2++;
+		n--;
 	}
-	return (1);
+	return (*s1 - *s2);
 }

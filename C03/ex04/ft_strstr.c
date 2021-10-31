@@ -1,30 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akarabay <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/28 12:23:21 by akarabay          #+#    #+#             */
-/*   Updated: 2021/10/28 13:27:57 by akarabay         ###   ########.fr       */
+/*   Created: 2021/10/31 10:56:24 by akarabay          #+#    #+#             */
+/*   Updated: 2021/10/31 11:02:54 by akarabay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <unistd.h>
-
-char *ft_strcpy(char *dest, char *src);
-
-void ft_putstr(char n)
+char	*ft_strstr(char *str, char *to_find)
 {
-	write(1, &n, 1);
-}
+	int	i;
+	int	a;
 
-int main(void)
-{
-	char a[1], b[] = "ali";
-
-	ft_strcpy(a, b);
-
-	ft_putstr(a[0]);
+	i = 0;
+	a = 0;
+	if (to_find[a] == '\0')
+		return (str);
+	while (str[i] != '\0')
+	{
+		while (str[i + a] == to_find[a] && str[i + a] != '\0')
+			a++;
+		if (to_find[a] == '\0')
+			return (str + i);
+		i++;
+		a = 0;
+	}
+	return (0);
 }
