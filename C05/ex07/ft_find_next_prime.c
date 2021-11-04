@@ -1,26 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_find_next_prime.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akarabay <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/30 14:34:39 by akarabay          #+#    #+#             */
-/*   Updated: 2021/11/02 11:10:41 by akarabay         ###   ########.fr       */
+/*   Created: 2021/11/04 11:24:00 by akarabay          #+#    #+#             */
+/*   Updated: 2021/11/04 11:37:20 by akarabay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strncmp(char *s1, char *s2, unsigned int n)
+#include <stdio.h>
+
+int	ft_is_prime(int nb)
 {
-	while (*s1 != '\0' && *s2 != '\0' && n > 0)
-	{
-		if (*s1 != *s2)
-			break ;
-		s1++;
-		s2++;
-		n--;
-	}
-	if (n == 0)
+	int index;
+	
+	index = 2;
+	if (nb < 2)
 		return (0);
-	return (*(unsigned char *)s1 - *(unsigned char *)s2);
+	while (index <= nb / index)
+	{	
+		if(nb % index == 0)
+			return (0);
+		index++;
+	}
+	return (1);
+}
+
+int	ft_find_next_prime(int nb)
+{	
+	if (nb < 2)
+		return (2);
+	while (nb >= 2)
+	{
+		if (ft_is_prime(nb) == 1)
+			return (nb);
+		nb++;
+	}
+	return (0);
+}
+
+int main(void)
+{
+	printf("%d",ft_find_next_prime(5));
 }

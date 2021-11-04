@@ -1,26 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akarabay <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/30 14:34:39 by akarabay          #+#    #+#             */
-/*   Updated: 2021/11/02 11:10:41 by akarabay         ###   ########.fr       */
+/*   Created: 2021/11/03 20:54:53 by akarabay          #+#    #+#             */
+/*   Updated: 2021/11/03 21:03:52 by akarabay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strncmp(char *s1, char *s2, unsigned int n)
+int	ft_sqrt(int nb)
 {
-	while (*s1 != '\0' && *s2 != '\0' && n > 0)
-	{
-		if (*s1 != *s2)
-			break ;
-		s1++;
-		s2++;
-		n--;
-	}
-	if (n == 0)
+	unsigned int		sqrt;
+	unsigned int		index;
+
+	if (nb < 0)
 		return (0);
-	return (*(unsigned char *)s1 - *(unsigned char *)s2);
+	if (nb <= 1)
+		return (nb);
+	index = 0;
+	while ((sqrt = index * index) <= (unsigned int) nb)
+		index++;
+	index -= 1;
+	if (index * index == (unsigned int)nb)
+		return (index);
+	return (0);
 }

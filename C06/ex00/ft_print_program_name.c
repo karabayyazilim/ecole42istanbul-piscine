@@ -1,26 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_print_program_name.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akarabay <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/30 14:34:39 by akarabay          #+#    #+#             */
-/*   Updated: 2021/11/02 11:10:41 by akarabay         ###   ########.fr       */
+/*   Created: 2021/11/04 13:10:52 by akarabay          #+#    #+#             */
+/*   Updated: 2021/11/04 13:29:56 by akarabay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strncmp(char *s1, char *s2, unsigned int n)
+#include <unistd.h>
+
+void	ft_putstr(char *str)
 {
-	while (*s1 != '\0' && *s2 != '\0' && n > 0)
-	{
-		if (*s1 != *s2)
-			break ;
-		s1++;
-		s2++;
-		n--;
-	}
-	if (n == 0)
-		return (0);
-	return (*(unsigned char *)s1 - *(unsigned char *)s2);
+	while (*str)
+		write(1, str++, 1);
+}
+
+int	main(int argc, char **argv)
+{	
+	if (argc == 2)
+		ft_putstr(argv[1]);
+	write(1, "\n", 1);
 }

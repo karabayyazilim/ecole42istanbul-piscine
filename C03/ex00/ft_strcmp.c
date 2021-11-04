@@ -6,7 +6,7 @@
 /*   By: akarabay <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/30 14:05:21 by akarabay          #+#    #+#             */
-/*   Updated: 2021/10/30 14:22:20 by akarabay         ###   ########.fr       */
+/*   Updated: 2021/11/02 11:06:04 by akarabay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,5 +17,5 @@ int	ft_strcmp(char *s1, char *s2)
 		s1++;
 		s2++;
 	}
-	return (*s1 - *s2);
+	return (*(unsigned char *)s1 - *(unsigned char *)s2);
 }
