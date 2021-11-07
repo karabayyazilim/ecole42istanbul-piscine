@@ -6,7 +6,7 @@
 /*   By: akarabay <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 15:03:30 by akarabay          #+#    #+#             */
-/*   Updated: 2021/11/02 15:06:30 by akarabay         ###   ########.fr       */
+/*   Updated: 2021/11/05 14:11:44 by akarabay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,6 @@ int 	ft_atoi(char *str);
 
 int main(void)
 {
-	char str[] =  " ---+--+1234ab567";
+	char str[] =  " ---+--+1234ab567 ";
 	printf("%d", ft_atoi(str));
 }

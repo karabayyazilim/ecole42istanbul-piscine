@@ -6,7 +6,7 @@
 /*   By: akarabay <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 11:24:00 by akarabay          #+#    #+#             */
-/*   Updated: 2021/11/04 11:37:20 by akarabay         ###   ########.fr       */
+/*   Updated: 2021/11/06 02:45:51 by akarabay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 int	ft_is_prime(int nb)
 {
-	int index;
-	
+	int	index;
+
 	index = 2;
 	if (nb < 2)
 		return (0);
 	while (index <= nb / index)
 	{	
-		if(nb % index == 0)
+		if (nb % index == 0)
 			return (0);
 		index++;
 	}
@@ -39,9 +39,4 @@ int	ft_find_next_prime(int nb)
 		nb++;
 	}
 	return (0);
-}
-
-int main(void)
-{
-	printf("%d",ft_find_next_prime(5));
 }
